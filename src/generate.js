@@ -27,8 +27,8 @@ function generate(program, { cwd }) {
   const defaultBase = 'src';
   const rc = getBabelRc(cwd);
   const base = program.base || rc.base || defaultBase;
-  const defaultEntry = `${base}/index.js`;
-  const defaultRouter = `${base}/router.js`;
+  const defaultEntry = `${base}/main.tsx`;
+  const defaultRouter = `${base}/router/index.ts`;
 
   const [type, name] = program.args;
 
