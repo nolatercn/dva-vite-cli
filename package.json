@@ -1,16 +1,16 @@
 {
-  "name": "dva-cli",
+  "name": "dva-vite-cli",
   "version": "1.0.0",
   "description": "The dva vite command line utility.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvajs/dva-cli"
+    "url": "https://github.com/nolatercn/dva-vite-cli.git"
   },
-  "homepage": "https://github.com/dvajs/dva-cli",
-  "mail": "chencheng <sorrycc@gmail.com>",
+  "homepage": "https://github.com/nolatercn/dva-vite-cli.git",
+  "mail": "nolater <no.later.cn@gmail.com>",
   "license": "MIT",
   "bin": {
-    "dva": "./bin/dva"
+    "dva-vite": "./bin/dva"
   },
   "scripts": {
     "build": "rm -rf lib && babel src --out-dir lib"
