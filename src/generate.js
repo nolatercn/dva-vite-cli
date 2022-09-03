@@ -36,7 +36,7 @@ function generate(program, { cwd }) {
     switch (type) {
       case 'model':
         (() => {
-          const modelPath = `./models/${name}`;
+          const modelPath = `@/models/${name}`;
           const filePath = `${base}/models/${name}.js`;
           const entry = program.entry || defaultEntry;
           info('create', `model ${name}`);

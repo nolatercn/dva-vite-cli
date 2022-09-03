@@ -1,6 +1,6 @@
 {
   "name": "dva-vite-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The dva vite command line utility.",
   "repository": {
     "type": "git",
