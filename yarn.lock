@@ -1394,10 +1394,10 @@ duplexify@^3.2.0:
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
 
-dva-ast@^0.3.5:
-  version "0.3.5"
-  resolved "https://registry.yarnpkg.com/dva-ast/-/dva-ast-0.3.5.tgz#a07f0a085f0b75ebcc7c9c66a7bde433e326a1b1"
-  integrity sha512-Zy4rC6DjrmH5jclapIu7uv+l7W9xjZoMjBzd5QVC13SWunNFfdej/mSchzZyj0iu/BaoscP7mtFb2TibNI60YQ==
+dva-vite-ast@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/dva-vite-ast/-/dva-vite-ast-0.0.1.tgz#e816747e98b8408de710653f496196a9e8a4f81c"
+  integrity sha512-BRankoLTZfxBUjSYvly22tO3OcnFPSrVwgfbDrzdFy/BHdQICPcYO8pb/cTnHdF2r3osqh8fdMMlSqscN8TncQ==
   dependencies:
     fs-extra "^0.30.0"
     glob "^7.1.0"

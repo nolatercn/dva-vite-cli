@@ -1,4 +1,4 @@
-import { api } from 'dva-ast';
+import { api } from 'dva-vite-ast';
 import upperCamelCase from 'simple-uppercamelcase';
 import { basename, dirname, join } from 'path';
 import { statSync, readFileSync } from 'fs';
