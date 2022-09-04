@@ -37,7 +37,7 @@ function generate(program, { cwd }) {
       case 'model':
         (() => {
           const modelPath = `@/models/${name}`;
-          const filePath = `${base}/models/${name}.js`;
+          const filePath = `${base}/models/${name}.ts`;
           const entry = program.entry || defaultEntry;
           info('create', `model ${name}`);
           info('register', `to entry ${entry}`);
@@ -50,38 +50,38 @@ function generate(program, { cwd }) {
           });
         })();
         break;
-      case 'route':
-        (() => {
-          const componentName = upperCamelCase(name);
-          const componentPath = `${base}/routes/${componentName}.js`;
-          const componentCSSPath = `${base}/routes/${componentName}.css`;
-          const withCSS = program.css ? `, ${componentCSSPath}` : '';
-          info('create', `routeComponent ${componentPath}${withCSS}`);
-          api('routeComponents.create', {
-            sourcePath: cwd,
-            filePath: componentPath,
-            componentName,
-            css: program.css,
-          });
-          info('create', `route ${name} with ${componentPath}`);
-          api('router.createRoute', {
-            filePath: program.router || defaultRouter,
-            sourcePath: cwd,
-            path: `/${name}`,
-            component: {
-              componentName,
-              filePath: componentPath,
-            },
-          });
-        })();
-        break;
+      // case 'route':
+      //   (() => {
+      //     const componentName = upperCamelCase(name);
+      //     const componentPath = `${base}/routes/${componentName}.ts`;
+      //     const componentCSSPath = `${base}/routes/${componentName}.css`;
+      //     const withCSS = program.css ? `, ${componentCSSPath}` : '';
+      //     info('create', `routeComponent ${componentPath}${withCSS}`);
+      //     api('routeComponents.create', {
+      //       sourcePath: cwd,
+      //       filePath: componentPath,
+      //       componentName,
+      //       css: program.css,
+      //     });
+      //     info('create', `route ${name} with ${componentPath}`);
+      //     api('router.createRoute', {
+      //       filePath: program.router || defaultRouter,
+      //       sourcePath: cwd,
+      //       path: `/${name}`,
+      //       component: {
+      //         componentName,
+      //         filePath: componentPath,
+      //       },
+      //     });
+      //   })();
+      //   break;
       case 'component':
         (() => {
           const fileName = basename(name);
           const fileDir = dirname(name);
           const componentName = upperCamelCase(fileName);
-          const filePath = join(`${base}/components`, fileDir, `${componentName}.js`);
-          const componentCSSPath = join(`${base}/components`, fileDir, `${componentName}.css`);
+          const filePath = join(`${base}/components`, fileDir, `${componentName}.tsx`);
+          const componentCSSPath = join(`${base}/components`, fileDir, `${componentName}.less`);
           const withCSS = program.css ? `, ${componentCSSPath}` : '';
           info('create', `component ${filePath}${withCSS}`);
           api('components.create', {
